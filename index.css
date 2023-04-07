@@ -44,7 +44,7 @@ button {
 }
 
 .screen {
-  height: 350px;
+  height: 300px;
   width: 550px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -52,6 +52,7 @@ button {
   font-size: 100px;
   color: var(--light-primary);
   display: flex;
+  padding-right: 20px;
   flex-direction: column;
   justify-content: end;
   align-items: end;
@@ -77,8 +78,8 @@ button {
   box-shadow: inset 0px 0px 10px var(--dark-primary);
   align-self: center;
   font-size: 50px;
-  transform: translateY(-275px);
-  margin-right: 20px;
+  transform: translateY(-225px);
+  margin-right: 0px;
   align-self: flex-end;
 }
 
