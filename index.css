@@ -99,7 +99,7 @@ button {
   width: 52px;
   padding-top: 3.5px;
   padding-left: 4.5px;
-  box-shadow: 0 0px 10px var(--dark-primary);
+  box-shadow: 0 0px 10px -2px var(--dark-primary);
 }
 
 .screen > p {
