@@ -11,7 +11,7 @@ const clearScreen = function () {
   result.textContent = "";
   subResult.textContent = "";
   result.style.fontSize = `100px`;
-  subResult.style.fontSize = `100px`;
+  subResult.style.fontSize = `50px`;
 };
 
 const display = function (value) {
@@ -34,17 +34,17 @@ const percentage = function () {
 const backspace = function () {
   result.textContent = result.textContent.slice(0, -1);
   new ResizeObserver(() => {
-    if (result.clientWidth < 480) {
-      result.style.fontSize = `50px`;
+    if (result.clientWidth < screen.clientWidth - 40) {
+      result.style.fontSize = `30px`;
       for (btn of nonDeletingBtns) {
         btn.disabled = false;
       }
-      if (result.clientWidth < 480) {
-        result.style.fontSize = `60px`;
-        if (result.clientWidth < 480) {
-          result.style.fontSize = `80px`;
-          if (result.clientWidth < 480) {
-            result.style.fontSize = `100px`;
+      if (result.clientWidth < screen.clientWidth - 40) {
+        result.style.fontSize = `40px`;
+        if (result.clientWidth < screen.clientWidth - 40) {
+          result.style.fontSize = `70px`;
+          if (result.clientWidth < screen.clientWidth - 40) {
+            result.style.fontSize = `90px`;
           }
         }
       }
@@ -98,13 +98,13 @@ mode.addEventListener(`click`, function () {
 });
 
 new ResizeObserver(() => {
-  if (result.clientWidth > 480) {
-    result.style.fontSize = `80px`;
-    if (result.clientWidth > 480) {
-      result.style.fontSize = `60px`;
-      if (result.clientWidth > 480) {
-        result.style.fontSize = `50px`;
-        if (result.clientWidth > 480) {
+  if (result.clientWidth > screen.clientWidth - 40) {
+    result.style.fontSize = `70px`;
+    if (result.clientWidth > screen.clientWidth - 40) {
+      result.style.fontSize = `50px`;
+      if (result.clientWidth > screen.clientWidth - 40) {
+        result.style.fontSize = `30px`;
+        if (result.clientWidth > screen.clientWidth - 40) {
           for (btn of nonDeletingBtns) {
             btn.disabled = true;
           }
@@ -115,11 +115,11 @@ new ResizeObserver(() => {
 }).observe(result);
 
 // new ResizeObserver(() => {
-//   if (result.clientWidth < 480) {
+//   if (result.clientWidth < screen.clientWidth - 40) {
 //     result.style.fontSize = `50px`;
-//     if (result.clientWidth < 480) {
+//     if (result.clientWidth < screen.clientWidth - 40) {
 //       result.style.fontSize = `60px`;
-//       if (result.clientWidth < 480) {
+//       if (result.clientWidth < screen.clientWidth - 40) {
 //         result.style.fontSize = `80px`;
 //       }
 //     }
@@ -127,12 +127,12 @@ new ResizeObserver(() => {
 // }).observe(result);
 
 new ResizeObserver(() => {
-  if (subResult.clientWidth > 480) {
-    subResult.style.fontSize = `80px`;
-    if (subResult.clientWidth > 480) {
-      subResult.style.fontSize = `60px`;
-      if (subResult.clientWidth > 480) {
-        subResult.style.fontSize = `40px`;
+  if (subResult.clientWidth > screen.clientWidth - 40) {
+    subResult.style.fontSize = `70px`;
+    if (subResult.clientWidth > screen.clientWidth - 40) {
+      subResult.style.fontSize = `50px`;
+      if (subResult.clientWidth > screen.clientWidth - 40) {
+        subResult.style.fontSize = `30px`;
       }
     }
   }
